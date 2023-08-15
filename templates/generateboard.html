@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block title %}Boggle{% endblock %}
+
+{% block content %}
+<p class="mt-5">This is your game number: {{ session['count'] }}.</p>
+<p class="max"> Highest score achieved: {{ h_score}}.</p>
+<table>
+ {% for row in board %}
+ <tr>
+   {% for letter in row %}
+   <td> {{letter}}</td>
+   {% endfor %}
+ </tr>
+ {% endfor %}
+</table> <br>
+<form id="guess_form">
+    <label> Type your guess here:</label>
+    <input type="text" id="guess">
+    <input type="submit" id="submit">
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Boggle Game!</h1>
+    <div id="top-page">
+        <h4>You have 60 seconds to try your guesses, have fun!</h4>
+        <div class="timer"></div>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="answer">
+        <div id="score-count"></div>
+    </div>
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+    <script src="static/myscript.js"></script>
+</body>
+</html>
